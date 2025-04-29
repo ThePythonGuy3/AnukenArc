@@ -21,6 +21,12 @@ public class AndroidGL30 extends AndroidGL20 implements GL30{
     }
 
     @Override
+    public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations){
+        // glTexImage2DMultisample is not available in OpenGL ES, glTexStorage2DMultisample is functionally very similar
+        GLES31.glTexStorage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+    }
+
+    @Override
     public void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format,
                              int type, java.nio.Buffer pixels){
         if(pixels == null)

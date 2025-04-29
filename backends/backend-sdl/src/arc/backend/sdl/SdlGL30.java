@@ -9,6 +9,7 @@ public class SdlGL30 extends SdlGL20 implements GL30{
     @Override public void glReadBuffer(int mode){ SDLGL.glReadBuffer(mode); }
     @Override public void glDrawRangeElements(int mode, int start, int end, int count, int type, int offset){ SDLGL.glDrawRangeElements(mode, start, end, count, type, offset); }
     @Override public void glDrawRangeElements(int mode, int start, int end, int count, int type, Buffer indices){ SDLGL.glDrawRangeElements(mode, start, end, count, type, indices); }
+    @Override public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations){ SDLGL.glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations); }
     @Override public void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, int offset){ SDLGL.glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, offset); }
     @Override public void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, Buffer pixels){ SDLGL.glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels); }
     @Override public void glTexSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, int offset){ SDLGL.glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, offset); }

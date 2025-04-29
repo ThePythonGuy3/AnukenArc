@@ -142,6 +142,7 @@ public interface GL30 extends GL20{
     int GL_UNSIGNED_INT_SAMPLER_3D = 0x8DD3;
     int GL_UNSIGNED_INT_SAMPLER_CUBE = 0x8DD4;
     int GL_UNSIGNED_INT_SAMPLER_2D_ARRAY = 0x8DD7;
+    int GL_TEXTURE_2D_MULTISAMPLE = 0x9100;
     int GL_BUFFER_ACCESS_FLAGS = 0x911F;
     int GL_BUFFER_MAP_LENGTH = 0x9120;
     int GL_BUFFER_MAP_OFFSET = 0x9121;
@@ -310,6 +311,7 @@ public interface GL30 extends GL20{
     void glReadBuffer(int mode);
     void glDrawRangeElements(int mode, int start, int end, int count, int type, java.nio.Buffer indices);
     void glDrawRangeElements(int mode, int start, int end, int count, int type, int offset);
+    void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations);
     void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, java.nio.Buffer pixels);
     void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, int offset);
     void glTexSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, java.nio.Buffer pixels);

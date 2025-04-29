@@ -273,6 +273,10 @@ public class SDLGL{
         glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     */
 
+    public static native void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations); /*
+        glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+    */
+
     public static native void glTexParameterf(int target, int pname, float param); /*
         glTexParameterf(target, pname, param);
     */

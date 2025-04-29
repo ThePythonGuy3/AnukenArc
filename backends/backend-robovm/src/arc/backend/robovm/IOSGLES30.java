@@ -21,6 +21,12 @@ public class IOSGLES30 extends IOSGLES20 implements GL30{
 
     public native void glDrawRangeElements(int mode, int start, int end, int count, int type, int offset);
 
+    @Override
+    public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations)
+    {
+
+    }
+
     public native void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, Buffer pixels);
 
     public native void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, int offset);

@@ -306,6 +306,13 @@ public class GL30Interceptor extends GLInterceptor implements GL30{
     }
 
     @Override
+    public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations){
+        calls++;
+        gl30.glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+        check();
+    }
+
+    @Override
     public void glTexParameterf(int target, int pname, float param){
         calls++;
         gl30.glTexParameterf(target, pname, param);
